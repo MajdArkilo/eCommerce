@@ -149,8 +149,7 @@ app.use('/Catalog', function (req, res) {
 
 /*
 This service receives the parameter “item”, a JSON object containing the “id”, “price” and “qty” of a product.
-Returns the updated cart as an array of JSON object. 
-If the qty of any item is not positive, the item is to be deleted from the cart. 
+Returns the updated cart as an array of JSON object.  
 If the parameter is missing, the current cart is returned.
 */
 app.use("/cart", (req, res) => {
