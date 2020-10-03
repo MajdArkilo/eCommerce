@@ -1,0 +1,20 @@
+<h1>
+    Product
+</h1>
+<hr>
+<!-- can use this notation or the elvis operator to avoid the error -->
+<!-- <ul *ngIf= "productInfo"> -->
+<div *ngIf= "productInfo">       
+<ul *ngFor="let item of productInfo">
+    <li><b>ID: </b>{{item.id}}</li>
+    <li><b>Name: </b>{{item.name}}</li>
+    <li><b>Description: </b>{{item.description}}</li>
+    <li><b>Qty: </b>{{item.qty}}</li>
+    <li><b>Cost: </b>{{item.cost}}</li>
+    <li><b>Msrp: </b>{{item.msrp}}</li>
+    <li><b>CatId: </b>{{item.catId}}</li>
+    <li><b>VenId: </b>{{item.venId}}</li>
+    <br>
+    <button (click)="addToCart(item.id, 1, item.cost)">Add to cart!</button>
+</ul>
+</div> 

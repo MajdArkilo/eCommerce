@@ -1,0 +1,7 @@
+<!-- <button (click)="onShipTo()">Ship To</button>
+<hr> -->
+<h1>Catalog</h1>
+    <hr>
+<ol><li *ngFor="let item of catalog">
+    <a routerLink="/category" [queryParams]="{id: item.id}" >{{item.name}}</a>
+</li></ol>

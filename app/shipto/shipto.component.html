@@ -1,0 +1,38 @@
+<h1>ShipTo</h1>
+<hr>
+
+<br>
+
+<form (ngSubmit)="onSubmit()" #myForm="ngForm">
+  <label for="name">Name:  </label>
+  <input type="text" [(ngModel)]="name" name="name" /> *
+  <br>
+  <br>
+  <label for="addr1">Address 1: </label>
+  <input type="text" [(ngModel)]="addr1" name="addr1"  /> *
+  <br>
+  <br>
+  <label for="addr2">Address 2: </label>
+  <input type="text" [(ngModel)]="addr2" name="addr2" />
+  <br>
+  <br>
+  <label for="city">City: </label>
+  <input type="text" [(ngModel)]="city" name="city" /> *
+  <br>
+  <br>
+  <label for="prov">Province: </label>
+  <input type="text" [(ngModel)]="prov" name="prov" /> *
+  <br>
+  <br>
+  <label for="zip">Zip/Postal Code: </label>
+  <input type="text" [(ngModel)]="zip" name="zip" /> *
+  <br>
+  <br>
+  <label for="instruction">Instructions: </label>
+  <input type="text" [(ngModel)]="instruction" name="instruction" />  *
+  <br>
+  <br>
+
+  <button type="submit">Submit</button>
+</form>
+

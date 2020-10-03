@@ -1,0 +1,57 @@
+<h1>Order Details</h1>
+<hr>
+<div *ngIf="shippingInfo">
+    <h3 style="text-align:center;">Shipping Details</h3>
+<ul>
+    <li>
+        <b>Name</b> : {{shippingInfo.name}}
+    </li>
+    <li>
+        <b>Address 1</b> : {{shippingInfo.addr1}}
+    </li>
+    <li>
+        <b>Address 2</b> : {{shippingInfo.addr2}}
+    </li>
+    <li>
+        <b>City</b> : {{shippingInfo.city}}
+    </li>
+    <li>
+        <b>Province</b> : {{shippingInfo.prov}}
+    </li>
+    <li>
+        <b>Zip</b> : {{shippingInfo.zip}}
+    </li>
+    <li>
+        <b>Delivery Instructions</b> : {{shippingInfo.instruction}}
+    </li>
+
+</ul>
+</div>
+<br>
+<br>
+
+
+<div *ngIf="cartObj.length > 0">
+    
+    <h3 style="text-align:center;">Order Details</h3>
+    <hr>
+    <ol>
+    <li *ngFor="let item of cartObj">
+    
+        <b>Item ID: </b>{{item.id}}
+        <br>
+        <b>Item Price: </b>{{item.price}}
+        <br>
+        <b>Item Qty: </b>{{item.qty}}
+        <br>
+        <b>Extended Price: </b>{{truncate(item.price * item.qty)}}
+        <br>
+        <br>
+    </li>
+    </ol>
+    <hr>
+    <h4 style="text-align:center;">Total Price = ${{truncate(totalPrice)}}</h4>
+</div>
+<hr>
+<button (click)="onContinue()">Continue Shopping</button>
+<button (click)="onCheckout()">Checkout</button>
