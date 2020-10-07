@@ -1,5 +1,5 @@
 # Optimiva
-This is a static eCommerce website using Node.js for server, AngularJS for frontend, SQLite for database and Google Maps API (No CSS added yet).  Environment: to be deploy on AWS EC2 instance
+This is a static eCommerce website using Node.js for server, AngularJS for frontend, SQLite for database and Google Maps API.  Environment: AWS EC2.
 
 ## Services built in Node.js:
 
